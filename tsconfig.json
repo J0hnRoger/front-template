@@ -12,10 +12,28 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
+  },
+  "paths": {
+    "@src/*": ["src/*"], // will enable -> import { ... } from '@entities'
+    "@components/*": ["src/components/*"],
+    "@entities": ["src/entities"],
+    "@entities/*": ["src/entities/*"],
+    "@features/*": ["src/features/*"],
+    "@features": ["src/features"],
+    "@store": ["src/store"],
+    "history": [
+      "./node_modules/@types/history/index"
+    ],
+    "redux": [
+      "./node_modules/@types/redux/index"
+    ],
+    "react": [
+      "./node_modules/@types/react/index"
+    ]
   },
   "exclude": [
     "node_modules",
