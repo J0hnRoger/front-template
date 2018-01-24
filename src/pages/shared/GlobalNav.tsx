@@ -8,7 +8,7 @@ class GlobalNav extends React.Component<{}, {}> {
             <a href="#menu-toggle" className="btn btn-default" id="menu-toggle">
                 <em className="fa fa-bars" /></a>
             <ul className="nav nav-pills flex-column sidebar-nav">
-                <NavLink exact to={'/portal'} className="nav-link">
+                <NavLink exact to={'/home'} className="nav-link">
                   <li className="nav-item">
                   Home
                   </li>

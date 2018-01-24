@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 
-import GlobalStates from '../store/index';
+import app from './App';
 
-const rootReducer = combineReducers<GlobalStates>({
+const rootReducer = combineReducers({
+    app
 });
 
 export default rootReducer;
