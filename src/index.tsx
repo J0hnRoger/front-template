@@ -1,5 +1,13 @@
 require('react-hot-loader/patch');
 
+/** Css Framework **/
+import 'grommet/grommet-hpe.min.css';
+
+/** Base CSS */
+import './css/base.scss';
+import './css/layout.scss';
+import './css/theme.scss';
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';

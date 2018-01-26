@@ -158,7 +158,7 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.css$/,
+            test: /\.(scss|css)$/,
             use: [
               require.resolve('style-loader'),
               {
@@ -168,25 +168,31 @@ module.exports = {
                 },
               },
               {
-                loader: require.resolve('postcss-loader'),
+                loader: 'sass-loader?sourceMap',
                 options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  ident: 'postcss',
-                  plugins: () => [
-                    require('postcss-flexbugs-fixes'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ],
-                      flexbox: 'no-2009',
-                    }),
-                  ],
-                },
+                  includePaths: ['./node_modules', './node_modules/grommet/node_modules']
+                }
               },
+              // {
+              //   loader: require.resolve('postcss-loader'),
+              //   options: {
+              //     // Necessary for external CSS imports to work
+              //     // https://github.com/facebookincubator/create-react-app/issues/2677
+              //     ident: 'postcss',
+              //     plugins: () => [
+              //       require('postcss-flexbugs-fixes'),
+              //       autoprefixer({
+              //         browsers: [
+              //           '>1%',
+              //           'last 4 versions',
+              //           'Firefox ESR',
+              //           'not ie < 9', // React doesn't support IE8 anyway
+              //         ],
+              //         flexbox: 'no-2009',
+              //       }),
+              //     ],
+              //   },
+              // },
             ],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.

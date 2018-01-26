@@ -1,18 +1,21 @@
 import * as React from 'react';
 
-class Header extends React.Component {
+import Header from 'grommet/components/Header';
+import Title from 'grommet/components/Title';
+
+class MyHeader extends React.Component {
     public render() {
-        return <header className="page-header col-12">
-          <div className="page-header__logo-container col-3">
-              <a className="logo-top" href="/">
-              Test App
-              </a>
-          </div>
-          <div className="col-md-6 col-lg-1 text-center text-md-right">
-            Hello
-          </div>
-        </header>;
+        return (
+            <Header 
+                fixed={false}
+                float={false}
+                size="small"
+            >
+                <Title>
+                    Make It
+                </Title>
+            </Header>);
     }
 }
 
-export default Header;
+export default MyHeader;
