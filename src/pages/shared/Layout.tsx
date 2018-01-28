@@ -1,19 +1,16 @@
 import * as React from 'react';
 import App from 'grommet/components/App';
 import Article from 'grommet/components/Article';
-import Header from 'grommet/components/Header';
-import Section from 'grommet/components/Section';
 import Split from 'grommet/components/Split';
 import Sidebar from 'grommet/components/Sidebar';
 import Title from 'grommet/components/Title';
 import Animate from 'grommet/components/Animate';
-import Button from 'grommet/components/Button';
-
-import MenuIcon from 'grommet/components/icons/base/Menu';
+import Header from 'grommet/components/Header';
 
 import 'grommet-css';
 
 /** Components **/
+import MyHeader from './Header';
 import GlobalNav from '../shared/GlobalNav';
 // import Header from '../shared/Header';
 
@@ -32,20 +29,16 @@ export class Layout extends React.Component<Props, State> {
         };
     }
 
-    handleShowNav = (evt) => {
-        this.setState({ showNav: !this.state.showNav });
+    handleShowNav = (showNav) => {
+        this.setState({ showNav });
     }
 
     public render() {
-        return <App>
-             <Header pad="medium">
-                <Button
-                icon={<MenuIcon />}
-                plain={true}
-                onClick={this.handleShowNav} />
-                <Title>Front-Starter</Title>   
-            </Header>
-            <Split priority={this.state.showNav ? 'left' : 'right'}>
+        return <App centered={false}>
+           <MyHeader onShowNav={this.handleShowNav} />
+            <Split priority={this.state.showNav ? 'left' : 'right'}
+                padding="small"
+            >
                 <Animate enter={{'animation': 'slide-down', 'duration': 1000}} 
                         leave={{'animation': 'slide-up', 'duration': 1000}} 
                     >
@@ -63,9 +56,7 @@ export class Layout extends React.Component<Props, State> {
                     </Sidebar>
                 </Animate>
                 <Article scrollStep={false}>
-                    <Section>
                     {this.props.children}
-                    </Section>
                 </Article>
             </Split>
         </App>;

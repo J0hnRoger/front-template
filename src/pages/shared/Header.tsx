@@ -1,19 +1,38 @@
 import * as React from 'react';
 
 import Header from 'grommet/components/Header';
-import Title from 'grommet/components/Title';
+import Button from 'grommet/components/Button';
+import MenuIcon from 'grommet/components/icons/base/Menu';
 
-class MyHeader extends React.Component {
+interface Props {
+    onShowNav(show: boolean);
+}
+
+interface State {
+    showNav: boolean;
+}
+
+class MyHeader extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            showNav: true,
+        };
+    }
+    handleShowNav = (showNav) => {
+        this.setState({ showNav: !this.state.showNav }, this.props.onShowNav(this.state.showNav));
+    }
     public render() {
         return (
-            <Header 
-                fixed={false}
-                float={false}
-                size="small"
+            <Header pad="small"
+                size="small" 
+                className="l-header"
             >
-                <Title>
-                    Make It
-                </Title>
+                <Button
+                icon={<MenuIcon />}
+                plain={true}
+                onClick={this.handleShowNav}
+                color={{ color: 'white'}} />
             </Header>);
     }
 }
