@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
-const Tracker = () => (<div><h1>Tracker</h1></div>)
-const stories = storiesOf('Tracker', module);
+import withTests from '../../.storybook/withTests';
+
+import Tracker from '@components/Tracker';
+
+const stories = storiesOf('Tracker', module)
+  .addDecorator(withTests('Tracker'));
 
 stories
 .add('default', () => (<Tracker />));

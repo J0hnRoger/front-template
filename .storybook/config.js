@@ -1,5 +1,5 @@
-import { configure, addDecorator } from '@storybook/react';
-import { withTests } from './withTests'
+import { configure } from '@storybook/react';
+import withTests from './withTests'
 
 // Redux Provider
 // import Provider from './providers';
@@ -7,8 +7,6 @@ import { withTests } from './withTests'
 // addDecorator((story) => (
 //   <Provider story={story()} />
 // ));
-
- addDecorator((story) => withTests(story));
 
 // automatically import all files ending in *.stories.tsx
 const req = require.context('../stories', true, /.stories.tsx$/);

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tracker Tracker s'affiche correctement 1`] = `
+<div
+  className="card"
+>
+  <h4>
+    Tracker
+  </h4>
+</div>
+`;

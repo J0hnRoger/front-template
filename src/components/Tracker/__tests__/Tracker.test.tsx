@@ -7,14 +7,9 @@ import Tracker from '../';
 /**
   * Tests List
   *
-  *
   */
-
 const setup = (propOverrides) => {
    const props = Object.assign({
-      completedCount: 0,
-      activeCount: 0,
-      onClearCompleted: jest.fn(),
    }, propOverrides);
 
    const wrapper = shallow(<Tracker {...props} />);
@@ -27,14 +22,9 @@ const setup = (propOverrides) => {
    };
 };
 
-describe('Component::Tracker', () => {
+describe('Tracker', () => {
    test('Tracker s\'affiche correctement', () => {
-      const { count } = setup({ activeCount: 0 });
-      expect(1).toEqual(1);
+      const result = setup({})
+        expect(result.wrapper).toMatchSnapshot();
    });
-
-   test('Tracker se comporte correctement', () => {
-      const { count } = setup({ activeCount: 0 });
-      expect(1).toEqual(1);
-   });
-});
+})
