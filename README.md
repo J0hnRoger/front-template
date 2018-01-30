@@ -10,11 +10,13 @@ Front-end template based on [TypeScript-React-Starter](https://github.com/Micros
 
 **Major**
 
-* Adapting TSLint for guarantee internal style guide
-* Update Project structure
-* Adding StoryBook
-* Adding Wallaby for TypeScript
-* Adding auto-generation Node scripts for Redux / React components
+[] Adding Redux with templates generators
+[] Adding JSON Server with Fake
+ 
+[*] Update Project structure
+[*] Adapting TSLint for guarantee internal style guide
+[*] Adding StoryBook
+[*] Adding auto-generation Node scripts for Redux / React components
 
 **Minor**
 
