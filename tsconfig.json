@@ -1,47 +1,49 @@
 {
   "compilerOptions": {
-    "outDir": "build/dist",
-    "module": "esnext",
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
+    "baseUrl": ".",
     "moduleResolution": "node",
-    "rootDir": "src",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
-  },
-  "paths": {
-    "@src/*": ["src/*"], // will enable -> import { ... } from '@entities'
-    "@components/*": ["src/components/*"],
-    "@entities": ["src/entities"],
-    "@entities/*": ["src/entities/*"],
-    "@features/*": ["src/features/*"],
-    "@features": ["src/features"],
-    "@store": ["src/store"],
-    "history": [
-      "./node_modules/@types/history/index"
+    "target": "es5",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "skipDefaultLibCheck": true,
+    "lib": [
+      "es6",
+      "dom"
     ],
-    "redux": [
-      "./node_modules/@types/redux/index"
+    "types": [
+      "webpack-env",
+      "node",
     ],
-    "react": [
-      "./node_modules/@types/react/index"
-    ]
+    "paths": {
+      "@src/*": ["ClientApp/src/*"], // will enable -> import { ... } from '@entities'
+      "@components/*": ["ClientApp/src/components/*"],
+      "@entities": ["ClientApp/src/entities"],
+      "@entities/*": ["ClientApp/src/entities/*"],
+      "@features/*": ["ClientApp/src/features/*"],
+      "@features": ["ClientApp/src/features"],
+      "@store": ["ClientApp/src/store"],
+      "history": [
+        "./node_modules/@types/history/index"
+      ],
+      "redux": [
+        "./node_modules/@types/redux/index"
+      ],
+      "react": [
+        "./node_modules/@types/react/index"
+      ]
+    }
   },
+  "include": [
+    "./ClientApp/**/*.ts",
+    "./ClientApp/**/*.tsx"
+  ],
   "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
+    "./ClientApp/src/**/__tests__/*.test.ts",
+    "./ClientApp/src/**/__tests__/*.test.tsx",
+    "./ClientApp/storybook/**/*",
+    "./ClientApp/storybook/*",
+    "./node_modules"
   ]
 }

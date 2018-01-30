@@ -11,7 +11,7 @@ Front-end template based on [TypeScript-React-Starter](https://github.com/Micros
 **Major**
 
 * Adapting TSLint for guarantee internal style guide
-* Update Project structure for BoostMyMail Like App
+* Update Project structure
 * Adding StoryBook
 * Adding Wallaby for TypeScript
 * Adding auto-generation Node scripts for Redux / React components
