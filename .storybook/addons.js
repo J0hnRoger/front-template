@@ -1,1 +1,3 @@
-import 'storybook-addon-specifications/register';
+import '@storybook/addon-actions/register';
+import 'storybook-addon-jest/register';
+import 'storybook-addon-jest/styles';

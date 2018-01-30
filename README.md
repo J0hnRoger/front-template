@@ -25,9 +25,10 @@ Front-end template based on [TypeScript-React-Starter](https://github.com/Micros
 # Getting Started
 
 #Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+
+## Testing strategy 
+
 
 #Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
 
 ### Chore & Maintenance

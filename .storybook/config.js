@@ -1,10 +1,5 @@
-import { configure } from '@storybook/react';
-
-/** Enzyme - Configuration pour compatibilité avec react 15 */
-import { configure as enzymeConfigure } from 'enzyme';
-
-import Adapter from 'enzyme-adapter-react-16';
-enzymeConfigure({ adapter: new Adapter() });
+import { configure, addDecorator } from '@storybook/react';
+import { withTests } from './withTests'
 
 // Redux Provider
 // import Provider from './providers';
@@ -13,6 +8,7 @@ enzymeConfigure({ adapter: new Adapter() });
 //   <Provider story={story()} />
 // ));
 
+ addDecorator((story) => withTests(story));
 
 // automatically import all files ending in *.stories.tsx
 const req = require.context('../stories', true, /.stories.tsx$/);
