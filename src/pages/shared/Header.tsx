@@ -1,9 +1,5 @@
 import * as React from 'react';
 
-import Header from 'grommet/components/Header';
-import Button from 'grommet/components/Button';
-import MenuIcon from 'grommet/components/icons/base/Menu';
-
 interface Props {
     onShowNav(show: boolean);
 }
