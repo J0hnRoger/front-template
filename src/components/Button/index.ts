@@ -1,2 +1,2 @@
-import './Button'
-export { default } from './Button'
+import './Button';
+export { default } from './Button';

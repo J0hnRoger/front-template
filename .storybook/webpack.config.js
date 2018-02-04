@@ -35,7 +35,19 @@ module.exports = {
         },
         {
           test: /(.scss|.css)$/,
-          loader:  ["style-loader", "css-loader", "sass-loader?sourceMap"],
+          use: [
+            {
+              loader: 'style-loader'
+            },
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'sass-loader', options: {
+                includePaths: ['./node_modules', './node_modules/grommet/node_modules']
+              }
+            }
+          ]
         },
       ]
   },

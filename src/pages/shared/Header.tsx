@@ -23,17 +23,7 @@ class MyHeader extends React.Component<Props, State> {
         this.setState({ showNav: !this.state.showNav }, this.props.onShowNav(this.state.showNav));
     }
     public render() {
-        return (
-            <Header pad="small"
-                size="small" 
-                className="l-header"
-            >
-                <Button
-                icon={<MenuIcon />}
-                plain={true}
-                onClick={this.handleShowNav}
-                color={{ color: 'white'}} />
-            </Header>);
+        return (<div className="header" />)
     }
 }
 

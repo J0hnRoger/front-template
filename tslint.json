@@ -1,5 +1,5 @@
 {
-    "defaultSeverity": "error",
+    "defaultSeverity": "warning",
     "extends": [
         "tslint:recommended"
     ],
@@ -10,6 +10,9 @@
       "object-literal-sort-keys": [
         false
       ],
+      "no-var-requires": false,
+      "no-empty-interface": false,
+      "quote-props": "as-needed",
       "jsdoc-format": false,
       "interface-name": false,
       "member-access": false,

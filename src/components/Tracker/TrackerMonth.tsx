@@ -8,7 +8,6 @@ class TrackerMonth extends React.Component<Props> {
   render() {
    return (
     <div className="tracker__month">
-        
     </div>
    );
  }
