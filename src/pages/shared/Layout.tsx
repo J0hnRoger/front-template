@@ -26,6 +26,8 @@ export class Layout extends React.Component<Props, State> {
     }
 
     public render() {
-        return <div>{this.props.children}</div>
+        return <div className="container-fluid l-global-container">
+            {this.props.children}
+        </div>
   }
 }

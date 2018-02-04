@@ -1,8 +1,11 @@
 /*------------------------------------*\
   #LAYOUT - Style par défaut
-   - classes prefixées l- 
+   - classes prefixées l-
 \*------------------------------------*/
 @import './theme.scss';
+
+.l-global-container {
+}
 
 .l-header {
   color: white;
@@ -17,6 +20,8 @@
 }
 
 .l-top-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   min-height: 150px;
   color: white;
@@ -42,9 +47,9 @@
     background: -o-linear-gradient($angle, $primary 0%, $secondary 100%);
     background: -ms-linear-gradient($angle, $primary 0%, $secondary 100%);
     background: linear-gradient(to right, $primary 0%, $secondary 100%);
-    
+
     border-bottom-left-radius:60%;
     border-bottom-right-radius:60%;
-    
+
     @include shadowed;
   }

@@ -2,7 +2,8 @@
 require('react-hot-loader/patch');
 
 /** Css Framework **/
-import 'grommet/grommet-hpe.min.css';
+import 'bootstrap/dist/css/bootstrap-reboot.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /** Base CSS */
 import './css/base.scss';
