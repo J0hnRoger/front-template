@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { } from 'jest';
 import { shallow } from 'enzyme';
 
 import Tracker from '../';
