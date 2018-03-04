@@ -1,1 +1,1 @@
-export {default} from './AppRedux';
+export {default} from './AppReducers';
