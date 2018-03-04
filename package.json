@@ -55,7 +55,7 @@
     "test:coverage": "node scripts/test.js --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "gen:component": "plop"
+    "gen:component": "plop --plopfile config/plopfile.js"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.11",
@@ -98,7 +98,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}"
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx"
     ],
     "setupFiles": [
       "<rootDir>/config/jest/jest.setup.ts",
