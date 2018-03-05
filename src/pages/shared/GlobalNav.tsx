@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-class GlobalNav extends React.Component<{}, {}> {
+class GlobalNav extends React.Component {
     public render() {
         return (
             <div className="l-header">
