@@ -1,0 +1,13 @@
+/**
+ * {{ feature }} SELECTORS 
+ */
+
+import { createSelector } from 'reselect';
+
+import { GlobalStates } from '@src/store';
+
+const getAll = (state: GlobalStates) => (state.users.userProperties.allIds.map((propId) => (state.{{feature}}.all{{feature}}.byId[propId])));
+
+export const selectors = {
+  getAll,
+};

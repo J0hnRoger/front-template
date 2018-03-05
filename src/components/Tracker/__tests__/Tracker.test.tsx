@@ -16,14 +16,12 @@ const setup = (propOverrides) => {
    return {
       props,
       wrapper,
-      clear: wrapper.find('.clear-completed'),
-      count: wrapper.find('.todo-count'),
    };
 };
 
 describe('Tracker', () => {
-   test('Tracker s\'affiche correctement', () => {
-      const result = setup({})
-        expect(result.wrapper).toMatchSnapshot();
+  const { wrapper } = setup({});
+  test('Tracker s\'affiche correctement', () => {
+    expect(wrapper).toMatchSnapshot();
    });
 })
