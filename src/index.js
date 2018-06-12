@@ -1,4 +1,4 @@
 import utils from './utils';
-import './style.css';
+import './style.scss';
 
 utils.log("front");
