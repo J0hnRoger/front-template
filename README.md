@@ -1,6 +1,11 @@
 # Front Starter
 
-## ToolBox 
+# Next Step
+
+- Adding TSLint
+- Adding Aliases for folders
+
+## ToolBox
 
 **Language** : TypeScript
 
@@ -22,4 +27,4 @@
 
 ## Structure
 
-Fractal Structure : 
+Fractal Structure :

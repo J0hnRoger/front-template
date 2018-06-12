@@ -20,7 +20,26 @@ const config = {
                 : MiniCssExtractPlugin.loader,
                 "css-loader",
                 "sass-loader"
-            ]}
+            ]},
+            {
+                test: /\.(png|gif|jpe?g|svg)(\?.*)?$/,
+                use: [{
+                    loader : 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: '[name].[hash:4].[ext]'
+                    }
+                },
+                {
+                    loader: 'img-loader',
+                    options: {
+                        enabled: !devMode,
+                    }
+                }]
+            }, {
+                test: /\.(woff2?|eot|ttf|otf|wav)(\?.*)?$/,
+                loader: 'file-loader'
+            }
         ]
     },
     plugins: [
