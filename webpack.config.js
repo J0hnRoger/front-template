@@ -7,9 +7,12 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
     watch: devMode,
-    entry: ['./src/css/layout.scss', './src/index.js'],
+    entry: ['./src/css/layout.scss', './src/index.ts'],
     output: {
         filename: devMode ? '[name].js' : '[name].[chunkhash].js'
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.json']
     },
     module: {
         rules: [{
@@ -39,7 +42,12 @@ const config = {
             }, {
                 test: /\.(woff2?|eot|ttf|otf|wav)(\?.*)?$/,
                 loader: 'file-loader'
-            }
+            },
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ]
     },
     plugins: [

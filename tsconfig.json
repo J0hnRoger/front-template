@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src/",
+        "jsx": "react",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "jsxFactory": "h",
+        "sourceMap": true
+    },
+    "exclude": [
+      "node_modules"
+    ]
+}
