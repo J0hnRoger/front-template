@@ -7,6 +7,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
     watch: devMode,
+    entry: ['./src/css/layout.scss', './src/index.js'],
     output: {
         filename: devMode ? '[name].js' : '[name].[chunkhash].js'
     },

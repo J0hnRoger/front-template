@@ -4,6 +4,5 @@ $primary: #DDD;
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: $primary;
-    background-color: $primary;
-
+    background: $primary url('./webpack-logo-horizontal.png');
 }
