@@ -1,11 +1,12 @@
 
 class Human {
-    Name: string;
-    constructor(name:string) {
+    public Name: string;
+    constructor(name: string) {
         this.Name = name;
     }
 
-    sayHello = () => {
+    public sayHello = () => {
+        // tslint:disable-next-line:no-console
         console.log(`hello, my name is ${this.Name}`);
     }
 }

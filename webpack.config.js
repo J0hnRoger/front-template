@@ -15,7 +15,19 @@ const config = {
         extensions: ['.ts', '.js', '.json']
     },
     module: {
-        rules: [{
+        rules: [
+            {
+                enforce: 'pre',
+                test: /\.tsx?$/,
+                loader: 'tslint-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
             test: /\.(sa|sc|c)ss$/,
             use: [
                 devMode
@@ -42,11 +54,6 @@ const config = {
             }, {
                 test: /\.(woff2?|eot|ttf|otf|wav)(\?.*)?$/,
                 loader: 'file-loader'
-            },
-            {
-                test: /\.tsx?$/,
-                loader: 'ts-loader',
-                exclude: /node_modules/,
             },
         ]
     },
