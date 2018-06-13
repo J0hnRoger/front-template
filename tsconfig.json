@@ -1,12 +1,10 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src/",
         "jsx": "react",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "target": "es5",
         "jsxFactory": "h",
-        "sourceMap": true
+        "target": "es5",
+        "sourceMap": true,
+        "strict": true
     },
     "exclude": [
       "node_modules"
