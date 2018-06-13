@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": "./src",
         "jsx": "react",
         "jsxFactory": "h",
         "target": "es5",

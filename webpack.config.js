@@ -7,12 +7,12 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
     watch: devMode,
-    entry: ['./src/css/layout.scss', './src/index.ts'],
+    entry: ['./src/css/layout.scss', './src/index.tsx'],
     output: {
         filename: devMode ? '[name].js' : '[name].[chunkhash].js'
     },
     resolve: {
-        extensions: ['.ts', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.js', '.json']
     },
     module: {
         rules: [
